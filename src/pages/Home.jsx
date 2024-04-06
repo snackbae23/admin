@@ -21,8 +21,8 @@ const Home = () => {
   };
 
   return (
-    <div className='w-full h-[100vh] fixed bg-[rgba(247,247,248,1)] flex items-center justify-center'>
-      <div className='bg-[rgba(255,255,255,1)] h-[80%] w-[40%] flex flex-col items-center'>
+    <div className='w-full h-fit fixed bg-[rgba(247,247,248,1)] flex items-center justify-center'>
+      <div className='bg-[rgba(255,255,255,1)] my-14 mb w-[40%] flex flex-col items-center'>
         <img className='h-[112px] w-[200px] mt-4' src='/IMG-20231226-WA0003 2.png'></img>
         <p className='font-semibold mt-8 text-[1.5rem] tracking-wide'>Admin Snackbae</p>
         <div className='w-full  p-9 mt-14'>
