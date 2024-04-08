@@ -34,7 +34,7 @@ const Merchant = () => {
   return (
     <div className='w-full h-fit flex flex-col gap-7 items-center bg-[rgba(246,248,255,1)]'>
       <Navbar />
-      <h className='font-bold  text-[2rem]'>Merchant Profile</h>
+      <p className='font-bold  text-[2rem] mt-[100px]'>Merchant Profile</p>
       <div className='w-[80%] h-[150px]  flex gap-3   '>
         <div className='w-[24%] h-full flex flex-col gap-5 border-2 border-black justify-center rounded-md '>
           <p className='mt-2 ml-8  font-medium text-[1.6rem]'>₹ 214003.80</p>

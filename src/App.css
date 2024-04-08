@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+    background-color: #e4ef40;
+    font-weight: bold;
+    width: 30px;
+    border-radius: 20px;
+  }

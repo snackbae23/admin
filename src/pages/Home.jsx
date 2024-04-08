@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { IoEyeOffSharp } from "react-icons/io5";
 import { FaEye } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -42,25 +43,28 @@ const Home = () => {
 
             <label htmlFor="password">Password</label>
             <div className='flex items-center w-full relative'>
-            <input
-               className='border-2 w-full bg-slate-50 py-1 px-3 rounded-md text-[1.2rem]'
-               placeholder='*********'
-               type={passworda ? 'password' : 'text'}
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-             <div className=' cursor-pointer w-[5%] absolute right-2' onClick={eye}>
-                  {
-                    passworda ? <IoEyeOffSharp /> : <FaEye />
-                  }
+              <input
+                className='border-2 w-full bg-slate-50 py-1 px-3 rounded-md text-[1.2rem]'
+                placeholder='*********'
+                type={passworda ? 'password' : 'text'}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <div className=' cursor-pointer w-[5%] absolute right-2' onClick={eye}>
+                {
+                  passworda ? <IoEyeOffSharp /> : <FaEye />
+                }
 
-                </div>
+              </div>
             </div>
-            
 
-            <button className='w-full bg-yellow-400 items-center py-2 rounded-md mt-4' type="submit">Login</button>
+
+            <Link to='/admin' className='w-full bg-yellow-400 flex justify-center items-center py-2 rounded-md mt-4'>
+              <button type="submit">Login</button>
+            </Link>
+
           </form>
         </div>
 
