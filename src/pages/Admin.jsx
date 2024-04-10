@@ -990,6 +990,271 @@ const Admin = () => {
         "Mobile": "+91 9660066924",
         "uGender": "Male",
         "Total Spend": "₹3199.00",
+    },
+    {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
+    }, {
+        "Username": "Nitish Kumar",
+        "uid": "#ID342573",
+        "Mobile": "+91 9660066924",
+        "uGender": "Male",
+        "Total Spend": "₹3199.00",
     },]
 
     const Pagination = ({ data }) => {
@@ -1053,7 +1318,7 @@ const Admin = () => {
 
                 {/* Render the current page's data */}
                 {currentPageData().map((item, index) => (
-                    <div key={index} className="data-item flex justify-between px-16 my-2 font-semibold">
+                    <div key={index} className=" flex justify-between items-center px-16 my-2 font-semibold">
                         {/* Render your data here */}
                         <Link to='/userprofile' onClick={scrollToTop}>
                         <div>
@@ -1068,12 +1333,12 @@ const Admin = () => {
                         <div>{item['Total Spend']}</div>
                     </div>
                 ))}
-                <div className='flex justify-evenly'>
+                <div className='flex justify-evenly  mt-4'>
                     {/* Pagination controls */}
                     {/* Dropdown for items per page */}
                     <div className="items-per-page">
                         <label htmlFor="items-per-page">Items per page:</label>
-                        <select
+                        <select className='border-2 mx-2 rounded-md'
                             id="items-per-page"
                             value={itemsPerPage}
                             onChange={(e) => setItemsPerPage(Number(e.target.value))}
@@ -1506,6 +1771,15 @@ const Admin = () => {
                             <p className='text-[#004AAD]'>{udata.length} Merchant</p>
                         </div>
 
+                        <div className='relative flex items-center mt-4'>
+                        <CiSearch className='absolute text-[1.3rem] font-semibold ml-2' />
+                        <input
+                            className='w-[40%] py-2 px-8 rounded-lg'
+                            type="text"
+                            placeholder='Search by Id,restaurant name'
+                        />
+                    </div>
+
                     </div>
                     <input type="text" />
 
@@ -1562,9 +1836,9 @@ const Admin = () => {
                     <div className='w-full flex justify-between px-16 text-[#718096] font-semibold mt-5'>
                         <p>Blog heading</p>
                         <p className='ml-16'>Created Data</p>
-                        <div className='flex gap-16'>
+                        <div className='flex gap-16 px-'>
                             <p>Edit</p>
-                            <p>Delete</p>
+                            <p className='ml-2'>Delete</p>
                         </div>
                     </div>
 
@@ -1573,7 +1847,7 @@ const Admin = () => {
                             <div key={index} className='w-full flex justify-between px-16 text-[#3A3A49]  mt-5'>
                                 <p>{item['Blog heading']}</p>
                                 <p>{item['Create Date']}</p>
-                                <div className='flex gap-9'>
+                                <div className='flex gap-12'>
                                     <img className='size-12' src="\edit.png" alt="" />
                                     <img className='size-12' src="/Group 1171277986.png" alt="" />
                                 </div>
