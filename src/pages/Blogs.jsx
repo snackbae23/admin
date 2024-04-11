@@ -5,6 +5,43 @@ import { FaLink } from "react-icons/fa6";
 
 const Blogs = () => {
 
+  const [count,setcount]=useState(0);
+
+ const siftnext =()=>{
+   
+   console.log(count);
+  if(count==0) header1();
+  if(count==1) image1();
+  if(count==2) body1();
+  if(count==3) link1();
+  setcount(count+1);
+  if(count==3) setcount(0);
+ }
+
+ const header1=()=>{
+                setHead(true)
+                setImage(false)
+                setBody(false)
+                setLink(false)
+ }
+ const image1=()=>{
+  setHead(false)
+                setImage(true)
+                setBody(false)
+                setLink(false)
+}
+const body1=()=>{
+  setHead(false)
+  setImage(false)
+  setBody(true)
+  setLink(false)
+}
+const link1=()=>{
+  setHead(false)
+                setImage(false)
+                setBody(false)
+                setLink(true)
+}
 
   const [head, setHead] = useState(true)
   const [image, setImage] = useState(false)
@@ -55,7 +92,7 @@ const Blogs = () => {
           <div className='flex flex-col mt-9 p-5  w-[80%] h-fit gap-4 bg-white mb-9 '>
 
             {/* latest Blogs */}
-            <div className='w-full flex flex-col gap-3 mb-4  ml-7 mt-2 '>
+            <div className='w-full flex flex-col gap-3   ml-7 mt-2 mb-36 '>
               {
                 formData.header && <p className='font-bold
                 '>Latest blogs </p>
@@ -84,7 +121,7 @@ const Blogs = () => {
                 
                 <div className='flex flex-col gap-3'>
                   <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg mt-5'>
-                    <p className='font-bold text-black text-[1.1rem]' >B</p>
+                    <p className='font-bold text-black text-[1.1rem]' >I</p>
                     <p className='font-semibold text-[#999999]'>Image</p>
                   </div>
                   {formData.image && 
@@ -218,14 +255,7 @@ const Blogs = () => {
             onChange={handleChange}></input>}
           <div className=' flex flex-col gap-[.5rem]'>
             <button
-              onClick={
-                () => {
-                  setHead(!head)
-                  setImage(!image)
-                  setBody(!body)
-                  setLink(!link)
-                }
-              }
+              onClick={siftnext}
               className='px-[1rem] py-[.5rem] bg-[#EEEEEE] rounded-md' >Next</button>
             <button className='px-[1rem] py-[.5rem] bg-[#111111] rounded-md text-[#FFFFFF]' type="submit">Submit</button>
           </div>
