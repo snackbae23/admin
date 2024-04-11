@@ -47,13 +47,10 @@ const Blogs = () => {
   },]
 
   return (
-    <div className='w-full h-[100vh] bg-[rgba(246,248,255,1)] relative '>
+    <div className='w-full min-h-[100vh] h-fit bg-[rgba(246,248,255,1)] relative '>
       <Navbar />
-
-
-
-      <div className='w-full h-fit overflow-y-scroll  '>
-        <div className='w-full flex flex-col items-center '>
+      <div className='w-full h-fit'>
+        <div className='w-full flex flex-col items-center'>
           <p className='font-bold  text-[2rem] mt-[100px]'>Add/Edit Blog</p>
           <div className='flex flex-col mt-9 p-5  w-[80%] h-fit gap-4 bg-white mb-9 '>
 
@@ -63,42 +60,53 @@ const Blogs = () => {
                 formData.header && <p className='font-bold
                 '>Latest blogs </p>
               }
-             {
-              formData.header && 
               <div className='flex flex-col gap-3'>
-                 <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
-                <p className='font-bold text-black text-[1.1rem]' >H</p>
-                <p className='font-semibold text-[#999999]'>Header</p>
+                <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
+                  <p className='font-bold text-black text-[1.1rem]' >H</p>
+                  <p className='font-semibold text-[#999999]'>Header</p>
+                </div>
+                {formData.header &&
+                  <p className='text-black font-bold text-[2rem]'>{formData?.header}</p>
+                }
               </div>
-
-              <p className='text-black font-bold text-[2rem] '>{formData?.header}</p>
-              </div>
-             }
               {
-                formData.body &&
+
                 <div className='flex flex-col gap-3'>
-                  <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg'>
+                  <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg mt-5'>
                     <p className='font-bold text-black text-[1.1rem]' >B</p>
                     <p className='font-semibold text-[#999999]'>Body</p>
                   </div>
-                  <p className='w-[70%]'>{formData?.body}</p>
-                </div>
+                  {formData.body &&
+                    <p className='w-[70%]'>{formData?.body}</p>
+                  }</div>
               }
               {
-                formData.image && <div className='flex flex-col gap-3'>
-                  <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
+                
+                <div className='flex flex-col gap-3'>
+                  <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg mt-5'>
                     <p className='font-bold text-black text-[1.1rem]' >B</p>
                     <p className='font-semibold text-[#999999]'>Image</p>
                   </div>
-
+                  {formData.image && 
                   <img className='w-[160px] h-[100px]' src={formData.image} alt="" />
-                </div>
+                }</div>
+              }
+              {
+                
+                <div className='flex flex-col gap-3'>
+                  <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg mt-5'>
+                    <p className='font-bold text-black text-[1.1rem]' >L</p>
+                    <p className='font-semibold text-[#999999]'>Link</p>
+                  </div>
+                  {formData.link &&
+                    <p className='w-[70%]'>{formData?.link}</p>
+                  }</div>
               }
 
 
             </div>
             {/* old blogs */}
-            {data.map((item) => (
+            {/* {data.map((item) => (
               <div key={item.Id} className='w-full flex flex-col gap-3 mb-4  ml-7 mt-2 ' >
                 <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
                   <p className='font-bold text-black text-[1.1rem]' >H</p>
@@ -126,13 +134,13 @@ const Blogs = () => {
 
 
               </div>
-            ))}
+            ))} */}
           </div>
 
 
         </div>
       </div>
-      <div className='bg-white w-[80%] h-fit fixed top-[70vh] left-[50%] translate-x-[-50%] py-2 px-4 '>
+      <div className='bg-white w-[80%] h-fit fixed bottom-0 left-[50%] translate-x-[-50%] py-2 px-4 '>
         <div className='py-[.5rem] w-[30%] flex justify-between px-4 border-2 ml-4 '>
           <button
             onClick={
