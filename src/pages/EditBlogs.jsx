@@ -4,13 +4,58 @@ import { FaImage } from "react-icons/fa6";
 import { FaLink } from "react-icons/fa6";
 import axios from "axios";
 import Loader from "../components/Loader";
-import { useNavigate } from "react-router-dom";
+import {useParams} from 'react-router-dom';
 
-const Blogs = () => {
-  const navigate = useNavigate();
+const EditBlogs = () => {
+    const { id } = useParams();
+    const [pic, setPic] = useState();
+    const [blogid,setblogid] = useState();
+    const [formData, setFormData] = useState({
+        header: "",
+        image: "",
+        body: "",
+        link: "",
+    });
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // for a smooth scrolling
+        });
+    };
+    useEffect(() => {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: `http://localhost:4000/api/getBlogById/${id}`,
+            headers: {}
+        };
+
+        axios.request(config)
+            .then((response) => {
+                console.log(JSON.stringify(response.data));
+                setblogid(response.data.data._id);
+                // setData(response.data.data);
+                formData.header = response.data.data.header;
+                formData.body = response.data.data.body;
+                formData.image = response.data.data.image;
+                setPic(response?.data?.data?.image);
+                console.log(response.data.data.image);
+                // console.log(pic);
+                formData.link = response.data.data.link;
+                // console.log(data)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        scrollToTop();
+
+    },[]);
+
+    
+
   const [loading, setLoading] = useState(false);
   const [count, setcount] = useState(0);
-  const [pic, setPic] = useState();
+ 
 const shiftnext = () => {
   console.log(count);
   if (count == 0) image1();
@@ -54,13 +99,8 @@ const link1 = () => {
   const [image, setImage] = useState(false);
   const [body, setBody] = useState(false);
   const [link, setLink] = useState(false);
-  const [Dataa,setDataa] = useState();
-  const [formData, setFormData] = useState({
-    header: "",
-   image: "",
-    body: "",
-    link: "",
-  });
+  const [Data,setData] = useState();
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,11 +110,9 @@ const link1 = () => {
     }));
   };
 
-  useEffect(()=>{
-
-  },[loading])
+ 
   const handleImageChange = async (pics) => {
-    setLoading(true);
+    // setLoading(true);
     console.log(pics);
     const formData = new FormData();
     formData.append("file", pics);
@@ -94,6 +132,7 @@ const link1 = () => {
       .then((response) => {
         console.log(JSON.stringify(response.data));
         console.log(response.data.data.url);
+        // formData.image = response.data.data.url;
         setPic(response.data.data.url);
         // formData.image = response?.data?.data?.url;
         // console.log(formData.image);
@@ -108,48 +147,27 @@ const link1 = () => {
     e.preventDefault();
     // Handle form submission (e.g., send data to server)
     console.log("Form data submitted:", formData);
+    formData.image = pic;
     console.log(pic);
-    // setDataa({formData,pic});
-    formData.image=pic
-    console.log("Form data submitted2:", formData);
+    // setData({...formData,pic});
     let config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: "http://localhost:4000/api/addBlog",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: formData,
-    };
-
-    axios
-      .request(config)
+        method: 'put',
+        maxBodyLength: Infinity,
+        url: `http://localhost:4000/api/editBlog/${blogid}`,
+        headers: { 
+          'Content-Type': 'application/json'
+        },
+        data : formData
+      };
+      
+      axios.request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
       })
       .catch((error) => {
         console.log(error);
       });
-      navigate("/admin")
   };
-
-  const data = [
-    {
-      Header: "Best Cafe in Salt Lake",
-      Body: "Unlock the potential of artificial intelligence to streamline your content creation process and engage your audience like never before. Get ready to discover a smarter way to write and transform your ideas into captivating posts effortlessly.",
-      image: "Rectangle 17.png",
-    },
-    {
-      Header: "Foodoos-Reunion Cafe",
-      Body: "Unlock the potential of artificial intelligence to streamline your content creation process and engage your audience like never before. Get ready to discover a smarter way to write and transform your ideas into captivating posts effortlessly.",
-      image: "",
-    },
-    {
-      Header: "Chowman-Salt Lake",
-      Body: "Unlock the potential of artificial intelligence to streamline your content creation process and engage your audience like never before. Get ready to discover a smarter way to write and transform your ideas into captivating posts effortlessly.",
-      image: "Rectangle 17.png",
-    },
-  ];
 
   return (
     <div className="w-full min-h-[100vh] h-fit bg-[rgba(246,248,255,1)] relative ">
@@ -163,7 +181,7 @@ const link1 = () => {
         <div>
           <div className="w-full h-fit">
             <div className="w-full flex flex-col items-center">
-              <p className="font-bold  text-[2rem] mt-[100px]">Add Blog</p>
+              <p className="font-bold  text-[2rem] mt-[100px]">Edit Blog</p>
               <div className="flex flex-col mt-9 p-5  w-[80%] h-fit gap-4 bg-white mb-9 ">
                 {/* latest Blogs */}
                 <div className="w-full flex flex-col gap-3   ml-7 mt-2 mb-36 ">
@@ -224,36 +242,7 @@ const link1 = () => {
                     </div>
                   }
                 </div>
-                {/* old blogs */}
-                {/* {data.map((item) => (
-              <div key={item.Id} className='w-full flex flex-col gap-3 mb-4  ml-7 mt-2 ' >
-                <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
-                  <p className='font-bold text-black text-[1.1rem]' >H</p>
-                  <p className='font-semibold text-[#999999]'>Header</p>
-                </div>
-
-                <p className='text-black font-bold text-[2rem] '>{item.Header}</p>
-
-                <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg'>
-                  <p className='font-bold text-black text-[1.1rem]' >B</p>
-                  <p className='font-semibold text-[#999999]'>Body</p>
-                </div>
-                <p className='w-[70%]'>{item.Body}</p>
-
-                {
-                  item.image && <div className='flex flex-col gap-3'>
-                    <div className='flex gap-2 bg-[#EEEEEE] w-fit px-3 rounded-lg '>
-                      <p className='font-bold text-black text-[1.1rem]' >B</p>
-                      <p className='font-semibold text-[#999999]'>Image</p>
-                    </div>
-
-                    <img className='w-[160px] h-[100px]' src={item.image} alt="" />
-                  </div>
-                }
-
-
-              </div>
-            ))} */}
+               
               </div>
             </div>
           </div>
@@ -370,4 +359,4 @@ const link1 = () => {
   );
 };
 
-export default Blogs;
+export default EditBlogs;
