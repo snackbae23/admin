@@ -38,10 +38,6 @@ const Admin = () => {
         getAllBlogs();
     },[]);
 
-    function openBlog(blogId)
-    {
-
-    }
 
 
     const deleteBlog = async(blogId) => {
@@ -1891,15 +1887,18 @@ const Admin = () => {
                         {bdata && bdata.map((item, index) => {
                             const createdAtDate = new Date(item.createdAt);
                             const formattedCreatedAt = createdAtDate.toISOString().split('T')[0];
+                            const lastFourCharacters = item._id.slice(-4);
                             return(
+                           
                             <div key={index} className='w-full flex justify-between px-16 text-[#3A3A49]  mt-5'>
-                                <p onClick={() => openBlog(item._id)}>{item.header}</p>
+                                 <Link to={`/editBlog/${lastFourCharacters}`}><p onClick={() => openBlog(item._id)}>{item.header}</p></Link>
                                 <p>{formattedCreatedAt}</p>
                                 <div className='flex gap-12'>
                                     <img className='size-12' src="\edit.png" alt="" />
                                     <div onClick={() => deleteBlog(item._id)}><img className='size-12' src="/Group 1171277986.png" alt="" /></div>
                                 </div>
                             </div>
+                            
                         )})}
                     </div>
                 </div>

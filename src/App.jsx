@@ -9,11 +9,10 @@ import AllTNX from './pages/AllTNX'
 import Merchant from './pages/Merchant'
 import UserProfile from './pages/UserProfile'
 import Blogs from './pages/Blogs'
+import EditBlogs from './pages/EditBlogs'
 // import {Routes,Route} from react
 
 function App() {
-  
-
   return (
     <>
       <div className='bg-emerald-300'>
@@ -25,6 +24,7 @@ function App() {
         <Route path='/merchant' element={<Merchant/>}></Route>
         <Route path='/userprofile' element={<UserProfile/>}></Route>
         <Route path='/blogs' element={<Blogs/>}></Route>
+        <Route path='/editBlog/:id' element={<EditBlogs/>}></Route>
       </Routes>
       </div>
     </>
