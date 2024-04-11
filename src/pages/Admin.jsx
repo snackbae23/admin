@@ -6,7 +6,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 const Admin = () => {
 
     const scrollToTop = () => {
@@ -16,6 +16,51 @@ const Admin = () => {
         });
     };
 
+    const [bdata,setbdata] = useState([]);
+    const getAllBlogs = async(req,res) => {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:4000/api/getBlogs',
+            headers: { }
+          };
+          
+          axios.request(config)
+          .then((response) => {
+            console.log(JSON.stringify(response.data));
+            setbdata(response.data.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }
+    useEffect(()=>{
+        getAllBlogs();
+    },[]);
+
+    function openBlog(blogId)
+    {
+
+    }
+
+
+    const deleteBlog = async(blogId) => {
+        let config = {
+            method: 'delete',
+            maxBodyLength: Infinity,
+            url: `http://localhost:4000/api/deleteBlog/${blogId}`,
+            headers: { }
+          };
+          
+          axios.request(config)
+          .then((response) => {
+            console.log(JSON.stringify(response.data));
+            getAllBlogs();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    }
 
     const data1 = [{
         "Customer": "Nitish",
@@ -1372,34 +1417,34 @@ const Admin = () => {
 
     // Blogs
 
-    const bdata = [{
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    }, {
-        "Blog heading": "Best Foodspots in Kolkata",
-        "Create Date": "2021-11-03  22:00"
-    },]
+    // const bdata = [{
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // }, {
+    //     "Blog heading": "Best Foodspots in Kolkata",
+    //     "Create Date": "2021-11-03  22:00"
+    // },]
 
 
     1
@@ -1843,16 +1888,19 @@ const Admin = () => {
                     </div>
 
                     <div className='w-full h-[90%] overflow-y-scroll mt-2  '>
-                        {bdata.map((item, index) => (
+                        {bdata && bdata.map((item, index) => {
+                            const createdAtDate = new Date(item.createdAt);
+                            const formattedCreatedAt = createdAtDate.toISOString().split('T')[0];
+                            return(
                             <div key={index} className='w-full flex justify-between px-16 text-[#3A3A49]  mt-5'>
-                                <p>{item['Blog heading']}</p>
-                                <p>{item['Create Date']}</p>
+                                <p onClick={() => openBlog(item._id)}>{item.header}</p>
+                                <p>{formattedCreatedAt}</p>
                                 <div className='flex gap-12'>
                                     <img className='size-12' src="\edit.png" alt="" />
-                                    <img className='size-12' src="/Group 1171277986.png" alt="" />
+                                    <div onClick={() => deleteBlog(item._id)}><img className='size-12' src="/Group 1171277986.png" alt="" /></div>
                                 </div>
                             </div>
-                        ))}
+                        )})}
                     </div>
                 </div>
 
