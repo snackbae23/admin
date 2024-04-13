@@ -1745,7 +1745,7 @@ const Admin = () => {
           </div>
 
           <div className="w-full h-[450px] bg-white p-4   rounded-xl overflow-y-scroll ">
-            {demo.map((reservation, index) => (
+            {demo && demo.map((reservation, index) => (
               <div
                 className="w-full px-16 py-2 text-[1rem] flex justify-between items-center border-b-2"
                 key={index}
