@@ -2,8 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { IoEyeOffSharp } from "react-icons/io5";
 import { FaEye } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 const Home = () => {
 
   const [passworda, setpassword] = useState(true);
@@ -14,11 +14,15 @@ const Home = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle the form submission logic here
     console.log('Submitted:', { email, password });
+    if((email=='Admin@gmail.com' )&& ( password =='Admin@123'))
+    {
+        navigate("/admin")
+    }
   };
 
   return (
@@ -61,9 +65,9 @@ const Home = () => {
             </div>
 
 
-            <Link to='/admin' className='w-full bg-yellow-400 flex justify-center items-center py-2 rounded-md mt-4'>
+            <div  className='w-full bg-yellow-400 flex justify-center items-center py-2 rounded-md mt-4'>
               <button type="submit">Login</button>
-            </Link>
+            </div>
 
           </form>
         </div>

@@ -82,7 +82,7 @@ const link1 = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:4000/api/fileUpload",
+      url: "http://52.66.249.180:4000/api/fileUpload",
       // headers: {
       //   ...data.getHeaders(),
       // },

@@ -24,10 +24,10 @@ const EditBlogs = () => {
     };
     useEffect(() => {
         let config = {
-            method: 'get',
-            maxBodyLength: Infinity,
-            url: `http://localhost:4000/api/getBlogById/${id}`,
-            headers: {}
+          method: "get",
+          maxBodyLength: Infinity,
+          url: `http://52.66.249.180:4000/api/getBlogById/${id}`,
+          headers: {},
         };
 
         axios.request(config)
