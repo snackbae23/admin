@@ -5,7 +5,6 @@ import { FaLink } from "react-icons/fa6";
 import axios from "axios";
 import Loader from "../components/Loader";
 import {useParams} from 'react-router-dom';
-import {useNaviagte} from 'react-router-dom';
 const EditBlogs = () => {
     const { id } = useParams();
     const [pic, setPic] = useState();
@@ -143,7 +142,7 @@ const link1 = () => {
       });
     setLoading(false);
   };
-const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission (e.g., send data to server)
@@ -168,7 +167,7 @@ const navigate = useNavigate();
       .catch((error) => {
         console.log(error);
       });
-      navigate("/admin")
+     
   };
 
   return (
