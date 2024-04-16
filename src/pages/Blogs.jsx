@@ -82,7 +82,7 @@ const link1 = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://52.66.249.180:4000/api/fileUpload",
+      url: "https://seashell-app-lgwmg.ondigitalocean.app/api/fileUpload",
       // headers: {
       //   ...data.getHeaders(),
       // },
@@ -115,7 +115,7 @@ const link1 = () => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:4000/api/addBlog",
+      url: "https://seashell-app-lgwmg.ondigitalocean.app/api/addBlog",
       headers: {
         "Content-Type": "application/json",
       },
