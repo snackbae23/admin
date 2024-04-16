@@ -26,7 +26,7 @@ const EditBlogs = () => {
         let config = {
           method: "get",
           maxBodyLength: Infinity,
-          url: `http://52.66.249.180:4000/api/getBlogById/${id}`,
+          url: `https://seashell-app-lgwmg.ondigitalocean.app/api/getBlogById/${id}`,
           headers: {},
         };
 
