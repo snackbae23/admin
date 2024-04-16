@@ -21,7 +21,7 @@ const Admin = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://52.66.249.180:4000/api/becomepartner",
+      url: "https://seashell-app-lgwmg.ondigitalocean.app/api/becomepartner",
       headers: {},
     };
 
@@ -40,7 +40,7 @@ const Admin = () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://52.66.249.180:4000/api/getBlogs",
+      url: "https://seashell-app-lgwmg.ondigitalocean.app/api/getBlogs",
       headers: {},
     };
 
@@ -63,7 +63,7 @@ const Admin = () => {
     let config = {
       method: "delete",
       maxBodyLength: Infinity,
-      url: `http://52.66.249.180:4000/api/deleteBlog/${blogId}`,
+      url: `https://seashell-app-lgwmg.ondigitalocean.app/api/deleteBlog/${blogId}`,
       headers: {},
     };
 
